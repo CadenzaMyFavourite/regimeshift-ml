@@ -1,0 +1,236 @@
+{
+  "description": "Reviewed aggregate extract from generated data only. No financial evidence.",
+  "source_kind": "synthetic",
+  "run_label": "verified-study",
+  "seed": 42,
+  "total_generated_rows": 46080,
+  "split_date_counts": {
+    "train": 96,
+    "tune": 16,
+    "calibration": 16,
+    "test": 32
+  },
+  "metrics": [
+    {
+      "model": "fixed",
+      "count": 9169,
+      "absolute_error_sum": 6645.9784394801645,
+      "scored_dates": 32,
+      "mae": 0.724831327241811
+    },
+    {
+      "model": "global",
+      "count": 9169,
+      "absolute_error_sum": 6748.734580224819,
+      "scored_dates": 32,
+      "mae": 0.7360382353827919
+    },
+    {
+      "model": "lightgbm",
+      "count": 9169,
+      "absolute_error_sum": 6645.9784394801645,
+      "scored_dates": 32,
+      "mae": 0.724831327241811
+    },
+    {
+      "model": "regime",
+      "count": 9169,
+      "absolute_error_sum": 6741.382122610883,
+      "scored_dates": 32,
+      "mae": 0.7352363532130967
+    },
+    {
+      "model": "ridge",
+      "count": 9169,
+      "absolute_error_sum": 12571.344070748833,
+      "scored_dates": 32,
+      "mae": 1.3710703534462683
+    },
+    {
+      "model": "zero",
+      "count": 9169,
+      "absolute_error_sum": 19632.219007758707,
+      "scored_dates": 32,
+      "mae": 2.1411515986213008
+    }
+  ],
+  "comparisons": [
+    {
+      "model": "regime",
+      "reference": "lightgbm",
+      "mae_difference": 0.010405025971285758,
+      "ci_low": -0.0001471132587727995,
+      "ci_high": 0.018355549132321205,
+      "block_dates": 5,
+      "replicates": 2000,
+      "requested_replicates": 2000,
+      "interpretation": "negative favors regime; conditional on this realized replay path"
+    },
+    {
+      "model": "regime",
+      "reference": "global",
+      "mae_difference": -0.0008018821696952307,
+      "ci_low": -0.0038885499984887707,
+      "ci_high": 0.003473879691670427,
+      "block_dates": 5,
+      "replicates": 2000,
+      "requested_replicates": 2000,
+      "interpretation": "negative favors regime; conditional on this realized replay path"
+    }
+  ],
+  "interval_metrics": [
+    {
+      "model": "fixed",
+      "interval": "fixed",
+      "count": "9169",
+      "covered": "7850",
+      "width_sum": "24509.614041830402",
+      "coverage": "0.8561457083651434",
+      "mean_width": "2.6730956529425676"
+    },
+    {
+      "model": "fixed",
+      "interval": "rolling",
+      "count": "9169",
+      "covered": "8177",
+      "width_sum": "26793.107699474163",
+      "coverage": "0.8918093576180609",
+      "mean_width": "2.9221406586840617"
+    },
+    {
+      "model": "global",
+      "interval": "fixed",
+      "count": "9169",
+      "covered": "7856",
+      "width_sum": "24820.37296696379",
+      "coverage": "0.856800087250518",
+      "mean_width": "2.7069879994507353"
+    },
+    {
+      "model": "global",
+      "interval": "rolling",
+      "count": "9169",
+      "covered": "8164",
+      "width_sum": "27177.770606353555",
+      "coverage": "0.8903915366997491",
+      "mean_width": "2.9640932060588456"
+    },
+    {
+      "model": "lightgbm",
+      "interval": "fixed",
+      "count": "9169",
+      "covered": "7850",
+      "width_sum": "24509.614041830402",
+      "coverage": "0.8561457083651434",
+      "mean_width": "2.6730956529425676"
+    },
+    {
+      "model": "lightgbm",
+      "interval": "rolling",
+      "count": "9169",
+      "covered": "8177",
+      "width_sum": "26793.107699474163",
+      "coverage": "0.8918093576180609",
+      "mean_width": "2.9221406586840617"
+    },
+    {
+      "model": "regime",
+      "interval": "fixed",
+      "count": "9169",
+      "covered": "7846",
+      "width_sum": "24722.98144471113",
+      "coverage": "0.8557094557748937",
+      "mean_width": "2.696366173487963"
+    },
+    {
+      "model": "regime",
+      "interval": "rolling",
+      "count": "9169",
+      "covered": "8158",
+      "width_sum": "27109.065173005194",
+      "coverage": "0.8897371578143746",
+      "mean_width": "2.956599975243232"
+    },
+    {
+      "model": "ridge",
+      "interval": "fixed",
+      "count": "9169",
+      "covered": "6624",
+      "width_sum": "34452.73576595133",
+      "coverage": "0.7224342894535937",
+      "mean_width": "3.7575238047716577"
+    },
+    {
+      "model": "ridge",
+      "interval": "rolling",
+      "count": "9169",
+      "covered": "7762",
+      "width_sum": "54254.1889590632",
+      "coverage": "0.8465481513796488",
+      "mean_width": "5.917132616322739"
+    },
+    {
+      "model": "zero",
+      "interval": "fixed",
+      "count": "9169",
+      "covered": "7110",
+      "width_sum": "62359.60307686433",
+      "coverage": "0.7754389791689388",
+      "mean_width": "6.801134592307158"
+    },
+    {
+      "model": "zero",
+      "interval": "rolling",
+      "count": "9169",
+      "covered": "8177",
+      "width_sum": "80033.0502190914",
+      "coverage": "0.8918093576180609",
+      "mean_width": "8.728656365916828"
+    }
+  ],
+  "development_runtime": {
+    "fit_and_tuning_prediction_seconds": 0.6602967000217177,
+    "total_seconds": 1.1927033999818377
+  },
+  "evaluation_seconds": 0.7602629999746569,
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "packages": {
+      "regimeshift-ml": "0.1.0",
+      "numpy": "2.4.6",
+      "polars": "1.44.2",
+      "pyarrow": "24.0.0",
+      "scikit-learn": "1.9.1",
+      "lightgbm": "4.7.0",
+      "scipy": "1.17.1",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0"
+    },
+    "git_commit": null,
+    "dependency_lock_sha256": "e659fcfbda72d7d2cde9009d2c85285c04fab15d62ea0f16360f57c0abfc8a64",
+    "source_hashes": {
+      "__init__.py": "4a086c872a65115574abbcb2ef039f69deebcb35d5d04baa0a71644ce9ed9b48",
+      "adaptation.py": "86bb08ce8baac65a660c238ca74106b844171dbe671e9fb8351f602f24d806dc",
+      "cli.py": "77e66d035d8d68baa5e79eed3c5c4a173d294906a89a838919765a8fab79cdd4",
+      "config.py": "616dfdca4703ba8398b132a2f869a9de61bbb637aa46643ebb185c206117b816",
+      "data.py": "0f818dffa389f34423f49d91102fe29f5cc1a92b54ca49ecaedd9c3c4f032968",
+      "evaluation.py": "701036f901f66449193a4a7ef60165001f3ec1cb74d5aa3ebe490bc64f7e52e2",
+      "features.py": "61bf38ec0ae2236befb5e2335912765599f858c0b86265120e251141e2940715",
+      "models.py": "a66f588032b37d45cdb10ad7310e5fd08987b0e8c6705378889feeca1ca0c07d",
+      "pipeline.py": "ea7d7472c3fefafc4f26a1c133e279a0cfa9b40e53bbf5d730dfca88f0f04c3d",
+      "regimes.py": "ff58e15fc9a56d2fa92aed32b463db23be058709be8433849b2e2833ff0e7f27",
+      "replay.py": "515ff596a59e9daaa38fac195fdd7605c92bf2d3ef35c491f6e3980a23ba992e",
+      "reporting.py": "18530c1b483f905b9cc2e783643e27f7ee31716ecafa9064e2360f41abad3679",
+      "synthetic.py": "c47143b94b8f207adea71ac358ee2362f1e862190104e9559f2c54a083a29dc3",
+      "utils.py": "fdeccdee67c154864cad21b2552bad55e125eaea08b2fde0e66a75a627677f61"
+    }
+  },
+  "raw_summary_sha256": "ff20a491e0ff006ef42e00fdaa2e859f94a26ade64446b393522a8be5b350088",
+  "limitations": [
+    "Conditional uncertainty on one realized replay path, not repeated training.",
+    "Previous-date labels and summaries are an offline timing assumption.",
+    "No guaranteed interval coverage under dependence or distribution shift.",
+    "Frozen experts cannot learn new feature relationships."
+  ]
+}

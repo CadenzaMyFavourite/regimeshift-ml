@@ -1,0 +1,17 @@
+# Paths are relative to your working directory. Run commands from the project root.
+dataset: data/processed/optiver
+run_dir: runs/optiver-v1
+seed: 42
+threads: 4
+ridge_alphas: [1.0, 10.0, 100.0]
+lgbm_leaves: [15, 31]
+lgbm_estimators: 300
+lgbm_learning_rate: 0.05
+lgbm_min_child_samples: 100
+half_lives: [5, 10, 20]
+temperatures: [0.1, 0.5, 1.0]
+shrinkage_dates: 5.0
+interval_coverage: 0.9
+interval_window: 20
+bootstrap_block: 5
+bootstrap_reps: 2000

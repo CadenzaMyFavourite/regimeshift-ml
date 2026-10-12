@@ -1,0 +1,8 @@
+# Equivalent model settings to the demo CLI, using its already prepared synthetic input.
+# Choose a new run_dir if this one exists.
+dataset: runs/demo-inputs/processed
+run_dir: runs/demo-configured
+seed: 42
+threads: 4
+lgbm_estimators: 150
+lgbm_min_child_samples: 30
